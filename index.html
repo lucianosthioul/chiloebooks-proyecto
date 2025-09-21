@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Enlace al CSS generado por Tailwind -->
+  <link href="./salida/output.css" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- Librería de iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Fuente Poppins desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <title>Chiloebooks</title>
+</head>
+
+<!-- Body con TailwindCSS -->
+<body class="bg-brand-background text-brand-text font-poppins antialiased">
+    
+    <!-- Header con navegación -->
+    <header class="border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo de chiloebooks -->
+            <a href="/index.html" class="text-2xl font-bold text-gray-900 flex items-center">
+                <img src="assets/img/chiloebooks.png" alt="Logo de Chiloebooks" class="h-8 me-2">
+            </a>
+            
+            <!-- Menú de navegación -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="/catalogo.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Catálogo</a></li>
+                <li><a href="#" id="irMasVendidos" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Más Vendidos</a></li>
+                <li><a href="/nosotros.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Nosotros</a></li>
+                <li><a href="/contacto.html" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200 font-poppins">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección principal -->
+        <section class="container mx-auto px-6 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-none mb-4 text-[rgb(0,0,0)] font-poppins">Descubre tu Próxima Gran Historia.</h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed font-poppins">Lee donde quieras, cuando quieras. Tu biblioteca personal, siempre contigo.</p>
+                    
+                    <!-- Botones de acción principales -->
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="/catalogo.html" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-105 font-poppins">Explorar Ahora</a>
+                        <a href="#masVendidos" class="bg-gray-100 text-[rgb(0,0,0)] font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-105 font-poppins">Ver Novedades</a>
+                    </div>
+                </div>
+                
+                <!-- Imagen destacada del libro principal -->
+                <div class="md:w-1/2 flex justify-center">
+                    <button class="book-item transition-all duration-300 hover:scale-105 cursor-pointer"
+                        data-title="La musica del azar"
+                        data-author="Paul Auster"
+                        data-cover="assets/img/portada.jpeg"
+                        data-isbn="978-0140178135"
+                        data-synopsis="Jim Nashe gana dinero en la lotería y se embarca en un viaje sin rumbo que lo lleva a una partida de póker con consecuencias inesperadas. Una exploración del azar, el destino y las decisiones que cambian la vida."
+                        data-genre="Misterio">
+                        <img src="assets/img/portada.jpeg" alt="La musica del azar" class="rounded-lg shadow-2xl w-2/3 md:w-auto">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de libros más vendidos con carrusel -->
+        <section class="py-16 bg-[rgb(245,245,247)]">
+            <div id="masVendidos" class="container mx-auto px-6">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-[rgb(29,29,31)] font-poppins">Más Vendidos</h2>
+                    
+                    <!-- Controles del carrusel -->
+                    <div class="flex gap-3">
+                        <button id="prevBtn" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-200 transition-all duration-200 cursor-pointer"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn" class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-200 transition-all duration-200 cursor-pointer"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Contenedor del carrusel -->
+                <div id="carousel-container" class="overflow-x-auto carousel-container">
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                        
+                        <!-- Elementos individuales del carrusel (libros) -->
+                        <div class="carousel-item flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-3 flex">
+                            <button class="book-item bg-white rounded-lg overflow-hidden group w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl text-left cursor-pointer"
+                                data-title="It (Eso)"
+                                data-author="Stephen King"
+                                data-cover="assets/img/libros1.jpg"
+                                data-isbn="978-1501175466"
+                                data-synopsis="En el tranquilo pueblo de Derry, siete niños se enfrentan a una entidad malévola que emerge cada 27 años para alimentarse de sus miedos. Décadas después, como adultos, deben reunirse para combatir al monstruo, conocido como Pennywise, una vez más."
+                                data-genre="Terror">
+                                <div class="aspect-[3/4] w-full flex-grow overflow-hidden">
+                                    <img src="assets/img/libros1.jpg" alt="It (Eso)" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold truncate text-gray-900 font-poppins">It (Eso)</h3>
+                                    <p class="text-sm text-gray-500 font-poppins">Stephen King</p>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="carousel-item flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-3 flex">
+                            <button class="book-item bg-white rounded-lg overflow-hidden group w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl text-left cursor-pointer"
+                                data-title="Cancion de hielo y fuego I"
+                                data-author="George R. R. Martin"
+                                data-cover="assets/img/libros2.jpg"
+                                data-isbn="978-0553593716"
+                                data-synopsis="En el primer libro de la saga 'Canción de hielo y fuego', las grandes casas de Poniente luchan por el control del Trono de Hierro. Traiciones, intrigas políticas, y fuerzas sobrenaturales emergen en un mundo donde los veranos pueden durar décadas y los inviernos toda una vida."
+                                data-genre="Fantasía">
+                                <div class="aspect-[3/4] w-full flex-grow overflow-hidden">
+                                    <img src="assets/img/libros2.jpg" alt="Cancion de hielo y fuego I" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold truncate text-gray-900 font-poppins">Canción de hielo y fuego I</h3>
+                                    <p class="text-sm text-gray-500 font-poppins">George R. R. Martin</p>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="carousel-item flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-3 flex">
+                            <button class="book-item bg-white rounded-lg overflow-hidden group w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl text-left cursor-pointer"
+                                data-title="Crónica del pájaro que da cuerda al mundo"
+                                data-author="Haruki Murakami"
+                                data-cover="assets/img/libros3.png"
+                                data-isbn="978-0679775430"
+                                data-synopsis="Un hombre desempleado busca a su gato perdido, pero su búsqueda lo sumerge en un mundo surrealista y laberíntico bajo Tokio, donde se cruzan extraños personajes, recuerdos de guerra y misterios que desafían la realidad."
+                                data-genre="Surrealismo">
+                                <div class="aspect-[3/4] w-full flex-grow overflow-hidden">
+                                    <img src="assets/img/libros3.png" alt="Crónica del pájaro que da cuerda al mundo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold truncate text-gray-900 font-poppins">Crónica del pájaro que da cuerda al mundo</h3>
+                                    <p class="text-sm text-gray-500 font-poppins">Haruki Murakami</p>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="carousel-item flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-3 flex">
+                            <button class="book-item bg-white rounded-lg overflow-hidden group w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl text-left cursor-pointer"
+                                data-title="Leviatán"
+                                data-author="Paul Auster"
+                                data-cover="assets/img/libros4.jpeg"
+                                data-isbn="978-0140178135"
+                                data-synopsis="La historia de un hombre que muere al explotar una bomba que él mismo fabricaba, contada por su amigo novelista, quien reconstruye su vida a través de sus escritos y recuerdos, explorando temas como el azar, la identidad y la amistad."
+                                data-genre="Misterio">
+                                <div class="aspect-[3/4] w-full flex-grow overflow-hidden">
+                                    <img src="assets/img/libros4.jpeg" alt="Leviatán" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold truncate text-gray-900 font-poppins">Leviatán</h3>
+                                    <p class="text-sm text-gray-500 font-poppins">Paul Auster</p>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="carousel-item flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-3 flex">
+                            <button class="book-item bg-white rounded-lg overflow-hidden group w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl text-left cursor-pointer"
+                                data-title="Los hermanos Karamazov"
+                                data-author="Fyodor Dostoyevski"
+                                data-cover="assets/img/libros5.jpg"
+                                data-isbn="978-0-374-52837-9"
+                                data-synopsis="Una apasionante novela de misterio y asesinato que explora complejas cuestiones filosóficas sobre la fe, la duda, y la razón en el contexto de la Rusia del siglo XIX."
+                                data-genre="Drama">
+                                <div class="aspect-[3/4] w-full flex-grow overflow-hidden">
+                                    <img src="assets/img/libros5.jpg" alt="Los hermanos karamazov" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold truncate text-gray-900 font-poppins">Los hermanos Karamazov</h3>
+                                    <p class="text-sm text-gray-500 font-poppins">Fyodor Dostoyevski</p>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="carousel-item flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-3 flex">
+                            <button class="book-item bg-white rounded-lg overflow-hidden group w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl text-left cursor-pointer"
+                                data-title="La broma infinita"
+                                data-author="David Foster Wallace"
+                                data-cover="assets/img/libros6.jpg"
+                                data-isbn="978-0316066525"
+                                data-synopsis="Una novela enciclopédica y posmoderna que entrelaza las historias de una academia de tenis, un centro de rehabilitación de drogas y una familia disfuncional, todo mientras buscan un misterioso cartucho de entretenimiento tan adictivo que resulta letal."
+                                data-genre="Drama">
+                                <div class="aspect-[3/4] w-full flex-grow overflow-hidden">
+                                    <img src="assets/img/libros6.jpg" alt="La broma infinita" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold truncate text-gray-900 font-poppins">La broma infinita</h3>
+                                    <p class="text-sm text-gray-500 font-poppins">David Foster Wallace</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de categorías de libros -->
+        <section class="container mx-auto px-6 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[rgb(29,29,31)] font-poppins">Explora por Categorías</h2>
+            
+            <!-- Grid de categorías -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <a href="/catalogo.html?genero=Drama" class="block bg-[rgb(245,245,247)] p-8 rounded-lg hover:bg-gray-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    <i class="fas fa-mask text-3xl text-blue-600 mb-3"></i> 
+                    <h3 class="font-bold text-[rgb(29,29,31)] font-poppins">Drama</h3>
+                </a>
+                
+                <a href="/catalogo.html?genero=Fantasía" class="block bg-[rgb(245,245,247)] p-8 rounded-lg hover:bg-gray-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    <i class="fas fa-dragon text-3xl text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-[rgb(29,29,31)] font-poppins">Fantasía</h3>
+                </a>
+                
+                <a href="/catalogo.html?genero=Misterio" class="block bg-[rgb(245,245,247)] p-8 rounded-lg hover:bg-gray-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    <i class="fas fa-search text-3xl text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-[rgb(29,29,31)] font-poppins">Misterio</h3>
+                </a>
+                
+                <a href="/catalogo.html?genero=Surrealismo" class="block bg-[rgb(245,245,247)] p-8 rounded-lg hover:bg-gray-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    <i class="fas fa-brain text-3xl text-blue-600 mb-3"></i> 
+                    <h3 class="font-bold text-[rgb(29,29,31)] font-poppins">Surrealismo</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de colecciones destacadas -->
+        <section class="container mx-auto px-6 py-16 md:py-24">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-4xl font-bold text-[rgb(29,29,31)] font-poppins">Colecciones Destacadas</h2>
+                <p class="text-lg text-gray-600 mt-4 font-poppins">Selecciones por nuestros editores para inspirar tu próxima lectura.</p>
+            </div>
+            
+            <!-- Grid de colecciones -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[rgb(245,245,247)] rounded-lg overflow-hidden group cursor-pointer">
+                    <img src="assets/img/coleccionmisterio.png" alt="Colección de Misterio" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="p-6">
+                        <h4 class="text-sm font-semibold text-blue-600 uppercase mb-2 font-poppins">Misterio</h4>
+                        <h3 class="text-2xl font-bold mb-3 text-[rgb(29,29,31)] font-poppins">Noches en Vela</h3>
+                        <p class="text-gray-600 mb-4 font-poppins">Una selección de thrillers psicológicos que no podrás dejar de leer.</p>
+                        <a href="/coleccion-misterio.html" class="font-semibold text-blue-600 hover:text-blue-700 transition-all duration-200 font-poppins">Ver colección &rarr;</a>
+                    </div>
+                </div>
+                
+                <div class="bg-[rgb(245,245,247)] rounded-lg overflow-hidden group cursor-pointer">
+                    <img src="assets/img/coleccioncienciaficcion.png" alt="Colección de Ciencia Ficción" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="p-6">
+                        <h4 class="text-sm font-semibold text-blue-600 uppercase mb-2 font-poppins">Ciencia Ficción</h4>
+                        <h3 class="text-2xl font-bold mb-3 text-[rgb(29,29,31)] font-poppins">Futuros Distópicos</h3>
+                        <p class="text-gray-600 mb-4 font-poppins">Explora sociedades del mañana que te harán cuestionar nuestro presente.</p>
+                        <a href="/coleccion-ciencia-ficcion.html" class="font-semibold text-blue-600 hover:text-blue-700 transition-all duration-200 font-poppins">Ver colección &rarr;</a>
+                    </div>
+                </div>
+                
+                <div class="bg-[rgb(245,245,247)] rounded-lg overflow-hidden group cursor-pointer">
+                    <img src="assets/img/colecciongigantes.png" alt="Colección de Clásicos" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="p-6">
+                        <h4 class="text-sm font-semibold text-blue-600 uppercase mb-2 font-poppins">Literatura Clásica</h4>
+                        <h3 class="text-2xl font-bold mb-3 text-[rgb(29,29,31)] font-poppins">Gigantes de la Literatura</h3>
+                        <p class="text-gray-600 mb-4 font-poppins">Las obras maestras atemporales que todo amante de la lectura debe conocer.</p>
+                        <a href="/coleccion-clasicos.html" class="font-semibold text-blue-600 hover:text-blue-700 transition-all duration-200 font-poppins">Ver colección &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de autor del mes -->
+        <section class="py-16 md:py-24 bg-[rgb(245,245,247)]">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="assets/img/david.jpg" alt="David Foster Wallace" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl ring-4 ring-white">
+                    </div>
+                    
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h4 class="text-sm font-semibold text-blue-600 uppercase mb-2 font-poppins">Autor del Mes</h4>
+                        <h2 class="text-4xl font-bold mb-4 text-[rgb(29,29,31)] font-poppins">David Foster Wallace</h2>
+                        
+                        <blockquote class="text-xl text-gray-600 italic border-l-4 border-blue-600 pl-6 my-6 font-poppins">
+                            "La verdadera libertad significa atención, conciencia, disciplina y esfuerzo; y poder preocuparse por los demás y sacrificarse por ellos, una y otra vez, de innumerables maneras poco glamurosas y sin cesar, cada día."
+                        </blockquote>
+                        
+                        <p class="text-gray-700 mb-8 font-poppins">Sumérgete en la mente compleja y brillante de David Foster Wallace, uno de los autores más influyentes de finales del siglo XX. Explora sus novelas, cuentos y ensayos que combinan ingenio, profundidad y una mirada única sobre la condición humana.</p>
+                        
+                        <a href="/catalogo.html?buscar=David Foster Wallace" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-105 cursor-pointer font-poppins">Descubre sus obras</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de motivación -->
+        <section class="bg-brand-accent">
+            <div class="container mx-auto px-6 py-16 text-center text-white">
+                <h2 class="text-4xl font-bold mb-4">¿Listo para encontrar tu próxima aventura?</h2>
+                <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">Con muchos títulos esperando ser descubiertos, tu próxima gran historia está a solo un clic de distancia.</p>
+                <a href="catalogo.html" class="bg-white text-brand-accent font-bold px-8 py-4 rounded-full hover:bg-gray-200 transition-transform duration-300 hover:scale-105">Explorar el Catálogo Completo</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-200">
+            <div class="container mx-auto px-6 py-8 text-center text-[rgb(107,114,128)]">
+                <p class="text-sm">&copy; 2025 Chiloebooks.</p>
+            </div>
+        </footer>
+
+        <!-- Modal para mostrar detalles de libros (oculto por defecto) -->
+        <div id="bookModal" class="fixed inset-0 bg-black/75 flex items-center justify-center p-4 z-50 opacity-0 invisible pointer-events-none transition-all duration-300">
+            <div id="modalContent" class="bg-gray-800 text-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
+                <button id="closeModalButton" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-all duration-200 cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                
+                <div class="p-8 md:p-10 flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3 flex-shrink-0">
+                        <img id="modal-book-cover" src="" alt="Portada del libro" class="w-full h-64 md:h-80 object-cover rounded-md shadow-lg">
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <h2 id="modal-book-title" class="text-3xl font-bold leading-tight mb-2 font-poppins"></h2>
+                        <p class="text-lg text-gray-300 mb-4 font-poppins">por <span id="modal-book-author" class="font-semibold"></span></p>
+                        
+                        <div class="mb-4">
+                            <span id="modal-book-genre" class="bg-sky-700 text-white text-xs font-semibold px-3 py-1 rounded-full font-poppins"></span>
+                        </div>
+                        
+                        <p id="modal-book-synopsis" class="text-gray-400 leading-relaxed mb-6 font-poppins"></p>
+                        
+                        <div class="border-t border-gray-700 pt-4">
+                            <p class="text-sm text-gray-500 font-poppins">Número de Serie: <span id="modal-book-isbn" class="font-mono"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts JavaScript externos -->
+        <script src="assets/js/smooth.js"></script>
+        <script src="assets/js/carrusel.js"></script>
+        <script src="assets/js/modal.js"></script>
+    </body>
+</html>

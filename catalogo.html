@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Enlace al CSS generado por Tailwind -->
+    <link href="./salida/output.css" rel="stylesheet">
+
+    <!-- Icono de la pestaña del navegador -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Librería de iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fuente Poppins desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>Chiloebooks - Catálogo</title>
+</head>
+<body class="bg-brand-background text-brand-text font-poppins antialiased">
+
+    <!-- Header con menu-->
+    <header class="border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="text-2xl font-bold text-gray-900 flex items-center">
+                <!-- Logo del sitio -->
+                <img src="assets/img/chiloebooks.png" alt="Logo de Chiloebooks" class="h-8 me-2">
+            </a>
+            <!-- Menú de navegación -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="/catalogo.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Catálogo</a></li>
+                <li><a href="/index.html#masVendidos" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Más Vendidos</a></li>
+                <li><a href="/nosotros.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Nosotros</a></li>
+                <li><a href="/contacto.html" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200 font-poppins">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section class="container mx-auto px-6 py-16 md:py-24">
+            <h1 class="text-4xl md:text-5xl font-bold text-[rgb(29,29,31)] text-center mb-12">
+                Explora Nuestro Catálogo Completo
+            </h1>
+
+            <!-- Barra de búsqueda y filtros -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 space-y-4 md:space-y-0 md:space-x-4">
+                <!-- Input de búsqueda -->
+                <input type="text" id="searchInput" placeholder="Buscar libros, autores..." class="w-full md:w-1/3 p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent transition-all">
+                
+                <!-- Filtros de género y orden -->
+                <div class="flex space-x-4 w-full md:w-2/3 justify-end">
+                    <select id="genreFilter" class="p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent transition-all">
+                        <option value="" disabled selected hidden>Género</option>
+                        <option value="">Todos los géneros</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Surrealismo">Surrealismo</option>
+                        <option value="Fantasía">Fantasía</option>
+                        <option value="Misterio">Misterio</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Ciencia Ficcion">Ciencia Ficción</option>
+                        <option value="Filosofia">Filosofía</option>
+                        <option value="Ensayo">Ensayo</option>
+                        <option value="Relatos cortos">Relatos cortos</option>
+                        <option value="Aventura">Aventura</option>
+                    </select>
+
+                    <select id="sortSelect" class="p-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent transition-all">
+                        <option value="" disabled selected hidden>Ordenar por</option>
+                        <option value="">Sin ordenar</option>
+                        <option value="titulo">Título (A-Z)</option>
+                        <option value="autor">Autor (A-Z)</option>
+                        <option value="precio">Precio (Menor a Mayor)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- GRID DE LIBROS -->
+            <div id="booksGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+                <!-- Cada botón representa un libro, con datos en data-attributes -->
+                <!-- CONTENIDO DE TODOS LOS LIBROS  -->
+                <!-- Libro 1: La broma infinita -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="La broma infinita" 
+                        data-author="David Foster Wallace" 
+                        data-genre="Drama" 
+                        data-price="15900"
+                        data-cover="assets/img/libros6.jpg"
+                        data-isbn="978-0316066525"
+                        data-synopsis="Una novela enciclopédica y posmoderna que entrelaza las historias de una academia de tenis, un centro de rehabilitación de drogas y una familia disfuncional, todo mientras buscan un misterioso cartucho de entretenimiento tan adictivo que resulta letal.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros6.jpg" alt="La broma infinita" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La broma infinita</h3>
+                        <p class="text-sm text-gray-500">David Foster Wallace</p>
+                    </div>
+                </button>
+
+                <!-- Libro 2: Leviatán -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Leviatán" 
+                        data-author="Paul Auster" 
+                        data-genre="Misterio" 
+                        data-price="12500"
+                        data-cover="assets/img/libros4.jpeg"
+                        data-isbn="978-0140178135"
+                        data-synopsis="La historia de un hombre que muere al explotar una bomba que él mismo fabricaba, contada por su amigo novelista, quien reconstruye su vida a través de sus escritos y recuerdos, explorando temas como el azar, la identidad y la amistad.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros4.jpeg" alt="Leviatán" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Leviatán</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
+                    </div>
+                </button>
+
+                <!-- Libro 3: Crónica del pájaro que da cuerda al mundo -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Crónica del pájaro que da cuerda al mundo" 
+                        data-author="Haruki Murakami" 
+                        data-genre="Surrealismo" 
+                        data-price="18700"
+                        data-cover="assets/img/libros3.png"
+                        data-isbn="978-0679775430"
+                        data-synopsis="Un hombre desempleado busca a su gato perdido, pero su búsqueda lo sumerge en un mundo surrealista y laberíntico bajo Tokio, donde se cruzan extraños personajes, recuerdos de guerra y misterios que desafían la realidad.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros3.png" alt="Crónica del pájaro que da cuerda al mundo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Crónica del pájaro que da cuerda al mundo</h3>
+                        <p class="text-sm text-gray-500">Haruki Murakami</p>
+                    </div>
+                </button>
+
+                <!-- Libro 4: Canción de hielo y fuego I -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Canción de Hielo y Fuego" 
+                        data-author="George R. R. Martin" 
+                        data-genre="Fantasía" 
+                        data-price="14200"
+                        data-cover="assets/img/libros2.jpg"
+                        data-isbn="978-0553593716"
+                        data-synopsis="En el primer libro de la saga 'Canción de hielo y fuego', las grandes casas de Poniente luchan por el control del Trono de Hierro. Traiciones, intrigas políticas, y fuerzas sobrenaturales emergen en un mundo donde los veranos pueden durar décadas y los inviernos toda una vida.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros2.jpg" alt="Canción de Hielo y Fuego" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Canción de Hielo y Fuego</h3>
+                        <p class="text-sm text-gray-500">George R. R. Martin</p>
+                    </div>
+                </button>
+
+                <!-- Libro 5: Los hermanos Karamazov -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Los hermanos Karamazov" 
+                        data-author="Fyodor Dostoyevski" 
+                        data-genre="Drama" 
+                        data-price="11800"
+                        data-cover="assets/img/libros5.jpg"
+                        data-isbn="978-0-374-52837-9"
+                        data-synopsis="Una apasionante novela de misterio y asesinato que explora complejas cuestiones filosóficas sobre la fe, la duda, y la razón en el contexto de la Rusia del siglo XIX.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros5.jpg" alt="Los hermanos Karamazov" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Los hermanos Karamazov</h3>
+                        <p class="text-sm text-gray-500">Fyodor Dostoyevski</p>
+                    </div>
+                </button>
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="It (Eso)" 
+                        data-author="Stephen King" 
+                        data-genre="Terror" 
+                        data-price="16300"
+                        data-cover="assets/img/libros1.jpg"
+                        data-isbn="978-1501175466"
+                        data-synopsis="En el tranquilo pueblo de Derry, siete niños se enfrentan a una entidad maléfica que emerge cada 27 años para alimentarse de sus miedos. Décadas después, como adultos, deben reunirse para combatir al monstruo, conocido como Pennywise, una vez más.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros1.jpg" alt="It (Eso)" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">It (Eso)</h3>
+                        <p class="text-sm text-gray-500">Stephen King</p>
+                    </div>
+                </button>
+
+                <!-- Libro 6: La trilogía de Nueva York -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="La trilogía de Nueva York" 
+                        data-author="Paul Auster" 
+                        data-genre="Misterio" 
+                        data-price="10000"
+                        data-cover="assets/img/trilogianuevayork.jpeg"
+                        data-isbn="978-0140097313"
+                        data-synopsis="Tres novelas conectadas que exploran la identidad, el lenguaje y la realidad en Nueva York. Cada historia presenta personajes que se pierden en laberintos urbanos y existenciales, cuestionando la naturaleza de la ficción y la verdad.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/trilogianuevayork.jpeg" alt="La trilogía de Nueva York" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La trilogía de Nueva York</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
+                    </div>
+                </button>
+
+                <!-- Libro 7: La llamada de Cthulhu -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="La llamada de Cthulhu" 
+                        data-author="H. P. Lovecraft" 
+                        data-genre="Terror" 
+                        data-price="11000"
+                        data-cover="assets/img/cthulhu.webp"
+                        data-isbn="978-0486454245"
+                        data-synopsis="Una colección de relatos de horror cósmico que introduce el mito de Cthulhu. Lovecraft presenta un universo donde antiguos seres cósmicos amenazan la cordura humana, y el conocimiento prohibido puede llevar a la locura.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/cthulhu.webp" alt="La llamada de Cthulhu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La llamada de Cthulhu</h3>
+                        <p class="text-sm text-gray-500">H. P. Lovecraft</p>
+                    </div>
+                </button>
+
+                <!-- Libro 7: Los crímenes de la calle Morgue -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Los crímenes de la calle Morgue" 
+                        data-author="Edgar Allan Poe" 
+                        data-genre="Misterio" 
+                        data-price="12000"
+                        data-cover="assets/img/crimenes.jpg"
+                        data-isbn="978-0486266909"
+                        data-synopsis="Considerado el primer relato de detectives de la literatura, presenta al detective Auguste Dupin resolviendo el brutal asesinato de dos mujeres en París. Poe establece las bases del género policial moderno con su método deductivo.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/crimenes.jpg" alt="Los crímenes de la calle Morgue" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Los crímenes de la calle Morgue</h3>
+                        <p class="text-sm text-gray-500">Edgar Allan Poe</p>
+                    </div>
+                </button>
+
+                <!-- Libro 8: Kafka en la orilla -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Kafka en la orilla" 
+                        data-author="Haruki Murakami" 
+                        data-genre="Surrealismo" 
+                        data-price="10000"
+                        data-cover="assets/img/libros7.png"
+                        data-isbn="978-1400079278"
+                        data-synopsis="La historia paralela de Kafka, un adolescente que huye de casa, y el señor Nakata, un anciano con habilidades sobrenaturales. Sus destinos se entrelazan en una narrativa que mezcla realismo mágico con filosofía existencial.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros7.png" alt="Kafka en la orilla" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Kafka en la orilla</h3>
+                        <p class="text-sm text-gray-500">Haruki Murakami</p>
+                    </div>
+                </button>
+
+                <!-- Libro 9: Crimen y castigo -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Crimen y castigo" 
+                        data-author="Fyodor Dostoyevski" 
+                        data-genre="Drama" 
+                        data-price="12000"
+                        data-cover="assets/img/crimenycastigo.webp"
+                        data-isbn="978-0486415871"
+                        data-synopsis="La historia de Raskolnikov, un estudiante empobrecido que comete un asesinato y lucha con las consecuencias psicológicas y morales de su acto. Una exploración profunda de la culpa, la redención y la naturaleza humana.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/crimenycastigo.webp" alt="Crimen y castigo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Crimen y Castigo</h3>
+                        <p class="text-sm text-gray-500">Fyodor Dostoyevski</p>
+                    </div>
+                </button>
+
+                <!-- Libro 10: Battle Royale -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Battle Royale" 
+                        data-author="Koushun Takami" 
+                        data-genre="Ciencia Ficcion" 
+                        data-price="10000"
+                        data-cover="assets/img/battleroyale.webp"
+                        data-isbn="978-1421565989"
+                        data-synopsis="En un Japón alternativo, estudiantes de secundaria son forzados a participar en un juego mortal donde solo uno puede sobrevivir. Una crítica social sobre la violencia, el autoritarismo y la pérdida de la inocencia.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/battleroyale.webp" alt="Battle Royale" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Battle Royale</h3>
+                        <p class="text-sm text-gray-500">Koushun Takami</p>
+                    </div>
+                </button>
+
+                <!-- Libro 11: El juego de ender -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="El juego de Ender" 
+                        data-author="Orson Scott Card" 
+                        data-genre="Ciencia Ficcion" 
+                        data-price="11000"
+                        data-cover="assets/img/ender.jpg"
+                        data-isbn="978-0812550702"
+                        data-synopsis="Ender Wiggin, un niño prodigio, es reclutado para entrenar en una escuela militar espacial para combatir una raza alienígena. La historia explora temas de liderazgo, moralidad y las consecuencias de la guerra.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/ender.jpg" alt="El juego de Ender" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">El juego de Ender</h3>
+                        <p class="text-sm text-gray-500">Orson Scott Card</p>
+                    </div>
+                </button>
+
+                <!-- Libro 12: ¿Sueñan los androides con ovejas eléctricas? -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="¿Sueñan los androides con ovejas eléctricas?" 
+                        data-author="Philip K. Dick" 
+                        data-genre="Ciencia Ficcion" 
+                        data-price="12000"
+                        data-cover="assets/img/androides.webp"
+                        data-isbn="978-0345404473"
+                        data-synopsis="En un futuro post-apocalíptico, Rick Deckard caza androides rebeldes en una Tierra devastada. La novela que inspiró Blade Runner explora qué significa ser humano y la naturaleza de la empatía y la conciencia.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/androides.webp" alt="¿Sueñan los androides con ovejas eléctricas?" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">¿Sueñan los androides con ovejas eléctricas?</h3>
+                        <p class="text-sm text-gray-500">Philip K. Dick</p>
+                    </div>
+                </button>
+
+                <!-- Libro 13: Dune -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Dune" 
+                        data-author="Frank Herbert" 
+                        data-genre="Ciencia Ficcion" 
+                        data-price="15000"
+                        data-cover="assets/img/dune.webp"
+                        data-isbn="978-0441172719"
+                        data-synopsis="En el planeta desértico Arrakis, Paul Atreides se convierte en líder de los Fremen y descubre su destino como mesías. Una épica de ciencia ficción que aborda política, religión, ecología y poder en un universo complejo.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/dune.webp" alt="Dune" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Dune</h3>
+                        <p class="text-sm text-gray-500">Frank Herbert</p>
+                    </div>
+                </button>
+
+                <!-- Libro 14: La larga marcha -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="La larga marcha" 
+                        data-author="Stephen King" 
+                        data-genre="Terror" 
+                        data-price="9000"
+                        data-cover="assets/img/lalargamarcha.jpg"
+                        data-isbn="978-0451196712"
+                        data-synopsis="Cien adolescentes participan en una marcha donde deben mantener un ritmo constante o enfrentar la muerte. Una alegoría distópica sobre la competencia, la supervivencia y la deshumanización en una sociedad autoritaria.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/lalargamarcha.jpg" alt="La larga marcha" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La larga marcha</h3>
+                        <p class="text-sm text-gray-500">Stephen King</p>
+                    </div>
+                </button>
+
+                <!-- Libro 15: El corazón delator -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="El corazón delator" 
+                        data-author="Edgar Allan Poe" 
+                        data-genre="Terror" 
+                        data-price="9000"
+                        data-cover="assets/img/corazondelator.jpg"
+                        data-isbn="978-0486266923"
+                        data-synopsis="Un relato psicológico sobre un narrador que comete un asesinato y es atormentado por la culpa. Poe explora la paranoia, la culpabilidad y la desintegración mental a través de una narrativa intensa y claustrofóbica.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/corazondelator.jpg" alt="El corazón delator" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">El corazón delator</h3>
+                        <p class="text-sm text-gray-500">Edgar Allan Poe</p>
+                    </div>
+                </button>
+
+                <!-- Libro 16: Moby-Dick -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Moby-Dick" 
+                        data-author="Herman Melville" 
+                        data-genre="Aventura" 
+                        data-price="15000"
+                        data-cover="assets/img/mobydick.webp"
+                        data-isbn="978-0486432151"
+                        data-synopsis="La obsesiva búsqueda del capitán Ahab por la ballena blanca que le quitó la pierna. Una épica marítima que explora temas de obsesión, destino, naturaleza y la condición humana en alta mar.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/mobydick.webp" alt="Moby-Dick" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Moby-Dick</h3>
+                        <p class="text-sm text-gray-500">Herman Melville</p>
+                    </div>
+                </button>
+
+                <!-- Libro 17: Fausto -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Fausto" 
+                        data-author="Goethe" 
+                        data-genre="Drama" 
+                        data-price="11000"
+                        data-cover="assets/img/fausto.webp"
+                        data-isbn="978-0486282114"
+                        data-synopsis="La historia del erudito Fausto que hace un pacto con Mefistófeles para obtener conocimiento y experiencias ilimitadas. Una obra maestra de la literatura alemana que explora la ambición humana, el conocimiento y la redención.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/fausto.webp" alt="Fausto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Fausto</h3>
+                        <p class="text-sm text-gray-500">Goethe</p>
+                    </div>
+                </button>
+
+                <!-- Libro 18: La República -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="La República" 
+                        data-author="Platón" 
+                        data-genre="Filosofia" 
+                        data-price="10000"
+                        data-cover="assets/img/larepublica.webp"
+                        data-isbn="978-0486411217"
+                        data-synopsis="Un diálogo filosófico sobre la justicia, el estado ideal y la naturaleza del conocimiento. Platón presenta su teoría de las Ideas y la alegoría de la caverna, fundamentales para entender la filosofía occidental.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/larepublica.webp" alt="La República" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La República</h3>
+                        <p class="text-sm text-gray-500">Platón</p>
+                    </div>
+                </button>
+
+                <!-- Libro 19: El rey pálido -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="El rey pálido" 
+                        data-author="David Foster Wallace" 
+                        data-genre="Drama" 
+                        data-price="11000"
+                        data-cover="assets/img/elreypalido.jpg"
+                        data-isbn="978-0316074230"
+                        data-synopsis="La novela póstuma e inacabada de Wallace sobre empleados del IRS en los años 80. Una meditación sobre el aburrimiento, la rutina y la búsqueda de significado en el trabajo cotidiano y la vida moderna.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/elreypalido.jpg" alt="El rey pálido" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">El rey pálido</h3>
+                        <p class="text-sm text-gray-500">David Foster Wallace</p>
+                    </div>
+                </button>
+
+                <!-- Libro 20: Hablemos de langostas -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Hablemos de langostas" 
+                        data-author="David Foster Wallace" 
+                        data-genre="Ensayo" 
+                        data-price="11000"
+                        data-cover="assets/img/hablemos.webp"
+                        data-isbn="978-0316013324"
+                        data-synopsis="Una colección de ensayos que incluye reflexiones sobre festivales gastronómicos, la pornografía, la retórica política y la cultura estadounidense. Wallace combina humor, filosofía y observación social aguda.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/hablemos.webp" alt="Hablemos de langostas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Hablemos de langostas</h3>
+                        <p class="text-sm text-gray-500">David Foster Wallace</p>
+                    </div>
+                </button>
+
+                <!-- Libro 21: Algo supuestamente divertido que nunca volveré a hacer -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Algo supuestamente divertido que nunca volveré a hacer" 
+                        data-author="David Foster Wallace" 
+                        data-genre="Ensayo" 
+                        data-price="12000"
+                        data-cover="assets/img/algo.jpg"
+                        data-isbn="978-0316925280"
+                        data-synopsis="Ensayos sobre un crucero de lujo, el tenis profesional, la televisión y otros aspectos de la cultura contemporánea. Wallace disecciona la experiencia moderna con su característico estilo intelectual y humorístico.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/algo.jpg" alt="Algo supuestamente divertido que nunca volveré a hacer" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Algo supuestamente divertido que nunca volveré a hacer</h3>
+                        <p class="text-sm text-gray-500">David Foster Wallace</p>
+                    </div>
+                </button>
+
+                <!-- Libro 22: Breves entrevistas con hombres repulsivos -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Breves entrevistas con hombres repulsivos" 
+                        data-author="David Foster Wallace" 
+                        data-genre="Relatos cortos" 
+                        data-price="11000"
+                        data-cover="assets/img/brevesentrevistas.webp"
+                        data-isbn="978-0316925316"
+                        data-synopsis="Una colección de relatos experimentales que incluye entrevistas ficticias con hombres que revelan actitudes problemáticas hacia las mujeres. Wallace explora la masculinidad tóxica y las relaciones interpersonales.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/brevesentrevistas.webp" alt="Breves entrevistas con hombres repulsivos" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Breves entrevistas con hombres repulsivos</h3>
+                        <p class="text-sm text-gray-500">David Foster Wallace</p>
+                    </div>
+                </button>
+
+                <!-- Libro 23: Esto es agua -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="Esto es agua" 
+                        data-author="David Foster Wallace" 
+                        data-genre="Ensayo" 
+                        data-price="10000"
+                        data-cover="assets/img/agua.jpg"
+                        data-isbn="978-0316068222"
+                        data-synopsis="El famoso discurso de graduación de Wallace en Kenyon College, convertido en libro. Una reflexión profunda sobre la conciencia, la compasión y la importancia de elegir cómo pensar en la vida cotidiana.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/agua.jpg" alt="Esto es agua" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Esto es agua</h3>
+                        <p class="text-sm text-gray-500">David Foster Wallace</p>
+                    </div>
+                </button>
+
+                <!-- Libro 2: La música del azar -->
+
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer" 
+                        data-title="La música del azar" 
+                        data-author="Paul Auster" 
+                        data-genre="Misterio" 
+                        data-price="10000"
+                        data-cover="assets/img/portada.jpeg"
+                        data-isbn="978-0140175919"
+                        data-synopsis="Jim Nashe gana dinero en la lotería y se embarca en un viaje sin rumbo que lo lleva a una partida de póker con consecuencias inesperadas. Una exploración del azar, el destino y las decisiones que cambian la vida.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/portada.jpeg" alt="La música del azar" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La música del azar</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
+                    </div>
+                </button>
+
+            </div>
+
+            <!-- Mensaje cuando no hay resultados -->
+            <div id="noResults" class="text-center py-16 hidden">
+                <p class="text-xl text-gray-500">No se encontraron libros que coincidan con tu búsqueda.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DETALLE DEL LIBRO -->
+    <div id="bookModal" class="fixed inset-0 bg-black/75 flex items-center justify-center p-4 z-50 opacity-0 invisible pointer-events-none transition-all duration-300">
+        <div id="modalContent" class="bg-gray-800 text-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
+            <!-- Botón de cierre -->
+            <button id="closeModalButton" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-all duration-200 cursor-pointer">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Contenido del modal -->
+            <div class="p-8 md:p-10 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3 flex-shrink-0">
+                    <img id="modal-book-cover" src="" alt="Portada del libro" class="w-full h-64 md:h-80 object-cover rounded-md shadow-lg">
+                </div>
+
+                <div class="md:w-2/3">
+                    <h2 id="modal-book-title" class="text-3xl font-bold leading-tight mb-2 font-poppins"></h2>
+                    <p class="text-lg text-gray-300 mb-4 font-poppins">
+                        por <span id="modal-book-author" class="font-semibold"></span>
+                    </p>
+
+                    <div class="mb-4">
+                        <span id="modal-book-genre" class="bg-sky-700 text-white text-xs font-semibold px-3 py-1 rounded-full font-poppins"></span>
+                    </div>
+
+                    <p id="modal-book-synopsis" class="text-gray-400 leading-relaxed mb-6 font-poppins"></p>
+
+                    <div class="border-t border-gray-700 pt-4">
+                        <p class="text-sm text-gray-500 font-poppins">
+                            Número de Serie: <span id="modal-book-isbn" class="font-mono"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200">
+        <div class="container mx-auto px-6 py-8 text-center text-[rgb(107,114,128)]">
+            <p class="text-sm">&copy; 2025 Chiloebooks.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de filtros y modal -->
+    <script src="assets/js/categorias.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

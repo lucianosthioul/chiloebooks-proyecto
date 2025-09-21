@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Enlace al CSS generado por Tailwind -->
+  <link href="./salida/output.css" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <!-- Librería de iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Fuente Poppins desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <title>Chiloebooks - Colección de Misterio</title>
+</head>
+
+<!-- Body con TailwindCSS -->
+<body class="bg-brand-background text-brand-text font-poppins antialiased">
+
+    <!-- Header con navegación -->
+    <header class="border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo de chiloebooks -->
+            <a href="/index.html" class="text-2xl font-bold text-gray-900 flex items-center">
+                <img src="assets/img/chiloebooks.png" alt="Logo de Chiloebooks" class="h-8 me-2">
+            </a>
+            
+            <!-- Menú de navegación -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="/catalogo.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Catálogo</a></li>
+                <li><a href="/index.html#masVendidos" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Más Vendidos</a></li>
+                <li><a href="/nosotros.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Nosotros</a></li>
+                <li><a href="/contacto.html" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200 font-poppins">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección principal -->
+        <section class="relative bg-gray-900 text-white h-80 flex items-center justify-center text-center">
+            <!-- Imagen de fondo con opacidad reducida -->
+            <div class="absolute inset-0">
+                <img src="assets/img/misterio.png" alt="Atmósfera de Misterio" class="w-full h-full object-cover opacity-40">
+            </div>
+            
+            <!-- Contenido superpuesto -->
+            <div class="relative z-10 px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Noches en Vela</h1>
+                <p class="text-lg md:text-xl mt-4 max-w-2xl mx-auto opacity-90">Una selección de thrillers psicológicos y misterios que no podrás dejar de leer.</p>
+            </div>
+        </section>
+
+        <!-- Sección de la colección de libros -->
+        <section class="container mx-auto px-6 py-16 md:py-24">
+            <h2 class="text-3xl font-bold text-[rgb(29,29,31)] mb-10">Explora la Colección de Misterio</h2>
+            
+            <!-- Grid responsivo para mostrar los libros -->
+            <div id="booksGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+                
+                <!-- Libro 1: Leviatán -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Leviatán"
+                        data-author="Paul Auster"
+                        data-genre="Misterio"
+                        data-price="12500"
+                        data-cover="assets/img/libros4.jpeg"
+                        data-isbn="978-0140178135"
+                        data-synopsis="La historia de un hombre que muere al explotar una bomba que él mismo fabricaba, contada por su amigo novelista, quien reconstruye su vida a través de sus escritos y recuerdos, explorando temas como el azar, la identidad y la amistad.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros4.jpeg" alt="Leviatán" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Leviatán</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
+                    </div>
+                </button>
+
+                <!-- Libro 2: La trilogía de Nueva York -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="La trilogía de Nueva York"
+                        data-author="Paul Auster"
+                        data-genre="Misterio"
+                        data-price="10000"
+                        data-cover="assets/img/trilogianuevayork.jpeg"
+                        data-isbn="978-0140097313"
+                        data-synopsis="Tres novelas conectadas que exploran la identidad, el lenguaje y la realidad en Nueva York. Cada historia presenta personajes que se pierden en laberintos urbanos y existenciales, cuestionando la naturaleza de la ficción y la verdad.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/trilogianuevayork.jpeg" alt="La trilogía de Nueva York" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La trilogía de Nueva York</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
+                    </div>
+                </button>
+                
+                <!-- Libro 3: La llamada de Cthulhu -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="La llamada de Cthulhu"
+                        data-author="H. P. Lovecraft"
+                        data-genre="Terror"
+                        data-price="11000"
+                        data-cover="assets/img/cthulhu.webp"
+                        data-isbn="978-0486454245"
+                        data-synopsis="Una colección de relatos de horror cósmico que introduce el mito de Cthulhu. Lovecraft presenta un universo donde antiguos seres cósmicos amenazan la cordura humana, y el conocimiento prohibido puede llevar a la locura.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/cthulhu.webp" alt="La llamada de Cthulhu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La llamada de Cthulhu</h3>
+                        <p class="text-sm text-gray-500">H. P. Lovecraft</p>
+                    </div>
+                </button>
+                
+                <!-- Libro 4: Los crímenes de la calle Morgue -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Los crímenes de la calle Morgue"
+                        data-author="Edgar Allan Poe"
+                        data-genre="Misterio"
+                        data-price="12000"
+                        data-cover="assets/img/crimenes.jpg"
+                        data-isbn="978-0486266909"
+                        data-synopsis="Considerado el primer relato de detectives de la literatura, presenta al detective Auguste Dupin resolviendo el brutal asesinato de dos mujeres en París. Poe establece las bases del género policial moderno con su método deductivo.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/crimenes.jpg" alt="Los crímenes de la calle Morgue" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Los crímenes de la calle Morgue</h3>
+                        <p class="text-sm text-gray-500">Edgar Allan Poe</p>
+                    </div>
+                </button>
+
+                <!-- Libro 5: Kafka en la orilla -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Kafka en la orilla"
+                        data-author="Haruki Murakami"
+                        data-genre="Surrealismo"
+                        data-price="10000"
+                        data-cover="assets/img/libros7.png"
+                        data-isbn="978-1400079278"
+                        data-synopsis="La historia paralela de Kafka, un adolescente que huye de casa, y el señor Nakata, un anciano con habilidades sobrenaturales. Sus destinos se entrelazan en una narrativa que mezcla realismo mágico con filosofía existencial.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/libros7.png" alt="Kafka en la orilla" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Kafka en la orilla</h3>
+                        <p class="text-sm text-gray-500">Haruki Murakami</p>
+                    </div>
+                </button>
+
+                <!-- Libro 6: Crimen y castigo -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Crimen y castigo"
+                        data-author="Fyodor Dostoyevski"
+                        data-genre="Drama"
+                        data-price="12000"
+                        data-cover="assets/img/crimenycastigo.webp"
+                        data-isbn="978-0486415871"
+                        data-synopsis="La historia de Raskolnikov, un estudiante empobrecido que comete un asesinato y lucha con las consecuencias psicológicas y morales de su acto. Una exploración profunda de la culpa, la redención y la naturaleza humana.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="assets/img/crimenycastigo.webp" alt="Crimen y castigo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Crimen y castigo</h3>
+                        <p class="text-sm text-gray-500">Fyodor Dostoyevski</p>
+                    </div>
+                </button>
+                
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal para mostrar detalles de libros (oculto inicialmente) -->
+    <div id="bookModal" class="fixed inset-0 bg-black/75 flex items-center justify-center p-4 z-50 opacity-0 invisible pointer-events-none transition-all duration-300">
+        <div id="modalContent" class="bg-gray-800 text-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
+            <!-- Botón para cerrar el modal -->
+            <button id="closeModalButton" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <!-- Contenido del modal -->
+            <div class="p-8 md:p-10 flex flex-col md:flex-row gap-8">
+                <!-- Imagen de la portada del libro -->
+                <div class="md:w-1/3 flex-shrink-0">
+                    <img id="modal-book-cover" src="" alt="Portada del libro" class="w-full h-64 md:h-80 object-cover rounded-md shadow-lg">
+                </div>
+
+                <!-- Información del libro -->
+                <div class="md:w-2/3">
+                    <h2 id="modal-book-title" class="text-3xl font-bold leading-tight mb-2"></h2>
+                    <p class="text-lg text-gray-300 mb-4">por <span id="modal-book-author" class="font-semibold"></span></p>
+                    
+                    <!-- Género del libro -->
+                    <div class="mb-4">
+                        <span id="modal-book-genre" class="bg-sky-700 text-white text-xs font-semibold px-3 py-1 rounded-full"></span>
+                    </div>
+
+                    <!-- Sinopsis del libro -->
+                    <p id="modal-book-synopsis" class="text-gray-400 leading-relaxed mb-6"></p>
+                    
+                    <!-- ISBN del libro -->
+                    <div class="border-t border-gray-700 pt-4">
+                        <p class="text-sm text-gray-500">Número de Serie: <span id="modal-book-isbn" class="font-mono"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="border-t border-gray-200">
+        <div class="container mx-auto px-6 py-8 text-center text-[rgb(107,114,128)]">
+            <p class="text-sm">&copy; 2025 Chiloebooks.</p>
+        </div>
+    </footer>
+
+    <!-- Script para el funcionamiento del modal -->
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

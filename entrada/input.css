@@ -1,0 +1,58 @@
+/* Importa TailwindCSS v4.1 */
+
+@import "tailwindcss";
+
+@layer base {
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    /* Elimina vertical-align ya que no funciona con display: block, me causaba un error en el output */
+  }
+}
+
+/* Estilos personalizados adicionales */
+
+/* Control de visibilidad del menú móvil cuando el checkbox está checked */
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
+/* Contenedor del carrusel - oculta scrollbar pero mantiene scroll suave */
+.carousel-container {
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ocultar scrollbar en navegadores WebKit (Chrome, Safari, Edge) */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Transición de opacidad para slides del carrusel */
+.carousel-slide {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Transición para bullets de paginación del carrusel */
+.carousel-pagination-bullet {
+  transition: all 0.3s ease;
+}
+
+/* Utilidad para truncar texto a 2 líneas con puntos suspensivos */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Definición de variables de tema personalizadas para Tailwind */
+@theme {
+  --color-brand-text: #374151; /* Color principal para texto */
+  --color-brand-accent: #2563eb; /* Color de acento principal */
+  --color-brand-accent-hover: #1d4ed8; /* Color de acento en hover */
+  --font-poppins: "Poppins", sans-serif; /* Fuente personalizada Poppins */
+}
+
+/* Solución para hover en Tailwind CSS v4*/
+@custom-variant hover (&:hover);

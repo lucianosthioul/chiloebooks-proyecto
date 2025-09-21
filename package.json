@@ -1,0 +1,26 @@
+{
+  "name": "third-project",
+  "version": "1.0.0",
+  "description": "# proyecto-libreria",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./entrada/input.css -o ./salida/output.css --watch",
+    "build": "tailwindcss -i ./entrada/input.css -o ./salida/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianosthioul/proyecto-libreria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucianosthioul/proyecto-libreria/issues"
+  },
+  "homepage": "https://github.com/lucianosthioul/proyecto-libreria#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
