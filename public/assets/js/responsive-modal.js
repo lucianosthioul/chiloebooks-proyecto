@@ -1,5 +1,4 @@
-// responsive-modal.js - Addon para hacer el modal responsivo
-// Este script se carga DESPUÉS de modal.js y extiende su funcionalidad
+// responsive-modal.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // Esperar a que el DOM esté listo y modal.js haya sido cargado

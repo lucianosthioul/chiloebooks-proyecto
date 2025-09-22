@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <!-- Enlace al CSS generado por Tailwind -->
-  <link href="./salida/output.css" rel="stylesheet">
+  <link href="/salida/output.css" rel="stylesheet">
 
   <!-- Icono de la pestaña del navegador -->
-  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/public/assets/img/favicon.ico" type="image/x-icon">
 
   <!-- Librería de iconos Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   
-  <title>Chiloebooks - Colección de Ciencia Ficción</title>
+  <title>Chiloebooks - Colección de Misterio</title>
 </head>
 
 <!-- Body con TailwindCSS -->
@@ -28,8 +28,8 @@
     <header class="border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo de chiloebooks -->
-            <a href="/index.html" class="text-2xl font-bold text-gray-900 flex items-center">
-                <img src="assets/img/chiloebooks.png" alt="Logo de Chiloebooks" class="h-8 me-2">
+            <a href="/public/index.html" class="text-2xl font-bold text-gray-900 flex items-center">
+                <img src="/public/assets/img/chiloebooks.png" alt="Logo de Chiloebooks" class="h-8 me-2">
             </a>
 
          <!-- Botón hamburguesa -->
@@ -40,10 +40,10 @@
             
             <!-- Menú de navegación -->
             <ul class="hidden md:flex items-center gap-8">
-                <li><a href="/catalogo.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Catálogo</a></li>
-                <li><a href="#" id="irMasVendidos" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Más Vendidos</a></li>
-                <li><a href="/nosotros.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Nosotros</a></li>
-                <li><a href="/contacto.html" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200 font-poppins">Contacto</a></li>
+                <li><a href="/public/catalogo.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Catálogo</a></li>
+                <li><a href="/public/index.html#masVendidos" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Más Vendidos</a></li>
+                <li><a href="/public/nosotros.html" class="text-sm font-semibold text-[rgb(29,29,31)] hover:text-blue-600 transition-all duration-200 font-poppins">Nosotros</a></li>
+                <li><a href="/public/contacto.html" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200 font-poppins">Contacto</a></li>
             </ul>
         </nav>
 
@@ -54,7 +54,7 @@
          class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out md:hidden z-40">
     </div>
 
-    <!-- Menú móvil -->
+    <!-- Menú móvil  -->
     <div id="mobile-menu"
          class="fixed top-0 right-0 w-48 h-full bg-white/90 backdrop-blur-md shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
         
@@ -69,22 +69,22 @@
         <!-- Lista de navegación -->
         <ul class="flex flex-col p-4 space-y-4">
             <li class="text-right">
-                <a href="/catalogo.html" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
+                <a href="/public/catalogo.html" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
                     Catálogo
                 </a>
             </li>
             <li class="text-right">
-                <a href="/index.html#masVendidos" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
+                <a href="/public/index.html#masVendidos" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
                     Más Vendidos
                 </a>
             </li>
             <li class="text-right">
-                <a href="/nosotros.html" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
+                <a href="/public/nosotros.html" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
                     Nosotros
                 </a>
             </li>
             <li class="text-right">
-                <a href="/contacto.html"
+                <a href="/public/contacto.html"
                    class="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200">
                     Contacto
                 </a>
@@ -98,128 +98,128 @@
         <section class="relative bg-gray-900 text-white h-80 flex items-center justify-center text-center">
             <!-- Imagen de fondo con opacidad reducida -->
             <div class="absolute inset-0">
-                <img src="assets/img/cienciaficcion.png" alt="Atmósfera de Ciencia ficción" class="w-full h-full object-cover opacity-40">
+                <img src="/public/assets/img/misterio.png" alt="Atmósfera de Misterio" class="w-full h-full object-cover opacity-40">
             </div>
             
             <!-- Contenido superpuesto -->
             <div class="relative z-10 px-6">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Futuros Distópicos</h1>
-                <p class="text-lg md:text-xl mt-4 max-w-2xl mx-auto opacity-90">Una selección de historias de ciencia ficción que exploran futuros distópicos tan inquietantes como irresistibles.</p>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Noches en Vela</h1>
+                <p class="text-lg md:text-xl mt-4 max-w-2xl mx-auto opacity-90">Una selección de thrillers psicológicos y misterios que no podrás dejar de leer.</p>
             </div>
         </section>
 
-        <!-- Sección de la colección de libros de ciencia ficción -->
+        <!-- Sección de la colección de libros -->
         <section class="container mx-auto px-6 py-16 md:py-24">
-            <h2 class="text-3xl font-bold text-[rgb(29,29,31)] mb-10">Explora la Colección de Ciencia Ficción</h2>
+            <h2 class="text-3xl font-bold text-[rgb(29,29,31)] mb-10">Explora la Colección de Misterio</h2>
             
-            <!-- Grid responsivo para mostrar los libros de ciencia ficción -->
+            <!-- Grid responsivo para mostrar los libros -->
             <div id="booksGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
                 
-                <!-- Libro 1: Battle Royale -->
+                <!-- Libro 1: Leviatán -->
                 <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
-                        data-title="Battle Royale"
-                        data-author="Koushun Takami"
-                        data-genre="Ciencia Ficcion"
-                        data-price="10000"
-                        data-cover="assets/img/battleroyale.webp"
-                        data-isbn="978-1421565989"
-                        data-synopsis="En un Japón alternativo, estudiantes de secundaria son forzados a participar en un juego mortal donde solo uno puede sobrevivir. Una crítica social sobre la violencia, el autoritarismo y la pérdida de la inocencia.">
+                        data-title="Leviatán"
+                        data-author="Paul Auster"
+                        data-genre="Misterio"
+                        data-price="12500"
+                        data-cover="/public/assets/img/libros4.jpeg"
+                        data-isbn="978-0140178135"
+                        data-synopsis="La historia de un hombre que muere al explotar una bomba que él mismo fabricaba, contada por su amigo novelista, quien reconstruye su vida a través de sus escritos y recuerdos, explorando temas como el azar, la identidad y la amistad.">
                     <div class="aspect-[3/4] w-full flex-grow">
-                        <img src="assets/img/battleroyale.webp" alt="Battle Royale" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="/public/assets/img/libros4.jpeg" alt="Leviatán" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     </div>
                     <div class="p-4 text-center">
-                        <h3 class="font-bold text-brand-text truncate mb-1">Battle Royale</h3>
-                        <p class="text-sm text-gray-500">Koushun Takami</p>
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Leviatán</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
+                    </div>
+                </button>
+
+                <!-- Libro 2: La trilogía de Nueva York -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="La trilogía de Nueva York"
+                        data-author="Paul Auster"
+                        data-genre="Misterio"
+                        data-price="10000"
+                        data-cover="/public/assets/img/trilogianuevayork.jpeg"
+                        data-isbn="978-0140097313"
+                        data-synopsis="Tres novelas conectadas que exploran la identidad, el lenguaje y la realidad en Nueva York. Cada historia presenta personajes que se pierden en laberintos urbanos y existenciales, cuestionando la naturaleza de la ficción y la verdad.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="/public/assets/img/trilogianuevayork.jpeg" alt="La trilogía de Nueva York" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La trilogía de Nueva York</h3>
+                        <p class="text-sm text-gray-500">Paul Auster</p>
                     </div>
                 </button>
                 
-                <!-- Libro 2: El juego de Ender -->
+                <!-- Libro 3: La llamada de Cthulhu -->
                 <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
-                        data-title="El juego de Ender"
-                        data-author="Orson Scott Card"
-                        data-genre="Ciencia Ficcion"
-                        data-price="11000"
-                        data-cover="assets/img/ender.jpg"
-                        data-isbn="978-0812550702"
-                        data-synopsis="Ender Wiggin, un niño prodigio, es reclutado para entrenar en una escuela militar espacial para combatir una raza alienígena. La historia explora temas de liderazgo, moralidad y las consecuencias de la guerra.">
-                    <div class="aspect-[3/4] w-full flex-grow">
-                        <img src="assets/img/ender.jpg" alt="El juego de Ender" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-brand-text truncate mb-1">El juego de Ender</h3>
-                        <p class="text-sm text-gray-500">Orson Scott Card</p>
-                    </div>
-                </button>
-
-                <!-- Libro 3: ¿Sueñan los androides con ovejas eléctricas? -->
-                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
-                        data-title="¿Sueñan los androides con ovejas eléctricas?"
-                        data-author="Philip K. Dick"
-                        data-genre="Ciencia Ficcion"
-                        data-price="12000"
-                        data-cover="assets/img/androides.webp"
-                        data-isbn="978-0345404473"
-                        data-synopsis="En un futuro post-apocalíptico, Rick Deckard caza androides rebeldes en una Tierra devastada. La novela que inspiró Blade Runner explora qué significa ser humano y la naturaleza de la empatía y la conciencia.">
-                    <div class="aspect-[3/4] w-full flex-grow">
-                        <img src="assets/img/androides.webp" alt="¿Sueñan los androides con ovejas eléctricas?" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-brand-text truncate mb-1">¿Sueñan los androides con ovejas eléctricas?</h3>
-                        <p class="text-sm text-gray-500">Philip K. Dick</p>
-                    </div>
-                </button>
-
-                <!-- Libro 4: La broma infinita -->
-                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
-                        data-title="La broma infinita"
-                        data-author="David Foster Wallace"
-                        data-genre="Drama"
-                        data-price="15900"
-                        data-cover="assets/img/libros6.jpg"
-                        data-isbn="978-0316066525"
-                        data-synopsis="Una novela enciclopédica y posmoderna que entrelaza las historias de una academia de tenis, un centro de rehabilitación de drogas y una familia disfuncional, todo mientras buscan un misterioso cartucho de entretenimiento tan adictivo que resulta letal.">
-                    <div class="aspect-[3/4] w-full flex-grow">
-                        <img src="assets/img/libros6.jpg" alt="La broma infinita" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-brand-text truncate mb-1">La broma infinita</h3>
-                        <p class="text-sm text-gray-500">David Foster Wallace</p>
-                    </div>
-                </button>
-
-                <!-- Libro 5: Dune -->
-                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
-                        data-title="Dune"
-                        data-author="Frank Herbert"
-                        data-genre="Ciencia Ficcion"
-                        data-price="15000"
-                        data-cover="assets/img/dune.webp"
-                        data-isbn="978-0441172719"
-                        data-synopsis="En el planeta desértico Arrakis, Paul Atreides se convierte en líder de los Fremen y descubre su destino como mesías. Una épica de ciencia ficción que aborda política, religión, ecología y poder en un universo complejo.">
-                    <div class="aspect-[3/4] w-full flex-grow">
-                        <img src="assets/img/dune.webp" alt="Dune" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-brand-text truncate mb-1">Dune</h3>
-                        <p class="text-sm text-gray-500">Frank Herbert</p>
-                    </div>
-                </button>
-
-                <!-- Libro 6: La larga marcha -->
-                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
-                        data-title="La larga marcha"
-                        data-author="Stephen King"
+                        data-title="La llamada de Cthulhu"
+                        data-author="H. P. Lovecraft"
                         data-genre="Terror"
-                        data-price="9000"
-                        data-cover="assets/img/lalargamarcha.jpg"
-                        data-isbn="978-0451196712"
-                        data-synopsis="Cien adolescentes participan en una marcha donde deben mantener un ritmo constante o enfrentar la muerte. Una alegoría distópica sobre la competencia, la supervivencia y la deshumanización en una sociedad autoritaria.">
+                        data-price="11000"
+                        data-cover="/public/assets/img/cthulhu.webp"
+                        data-isbn="978-0486454245"
+                        data-synopsis="Una colección de relatos de horror cósmico que introduce el mito de Cthulhu. Lovecraft presenta un universo donde antiguos seres cósmicos amenazan la cordura humana, y el conocimiento prohibido puede llevar a la locura.">
                     <div class="aspect-[3/4] w-full flex-grow">
-                        <img src="assets/img/lalargamarcha.jpg" alt="La larga marcha" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="/public/assets/img/cthulhu.webp" alt="La llamada de Cthulhu" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                     </div>
                     <div class="p-4 text-center">
-                        <h3 class="font-bold text-brand-text truncate mb-1">La larga marcha</h3>
-                        <p class="text-sm text-gray-500">Stephen King</p>
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">La llamada de Cthulhu</h3>
+                        <p class="text-sm text-gray-500">H. P. Lovecraft</p>
+                    </div>
+                </button>
+                
+                <!-- Libro 4: Los crímenes de la calle Morgue -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Los crímenes de la calle Morgue"
+                        data-author="Edgar Allan Poe"
+                        data-genre="Misterio"
+                        data-price="12000"
+                        data-cover="/public/assets/img/crimenes.jpg"
+                        data-isbn="978-0486266909"
+                        data-synopsis="Considerado el primer relato de detectives de la literatura, presenta al detective Auguste Dupin resolviendo el brutal asesinato de dos mujeres en París. Poe establece las bases del género policial moderno con su método deductivo.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="/public/assets/img/crimenes.jpg" alt="Los crímenes de la calle Morgue" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Los crímenes de la calle Morgue</h3>
+                        <p class="text-sm text-gray-500">Edgar Allan Poe</p>
+                    </div>
+                </button>
+
+                <!-- Libro 5: Kafka en la orilla -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Kafka en la orilla"
+                        data-author="Haruki Murakami"
+                        data-genre="Surrealismo"
+                        data-price="10000"
+                        data-cover="/public/assets/img/libros7.png"
+                        data-isbn="978-1400079278"
+                        data-synopsis="La historia paralela de Kafka, un adolescente que huye de casa, y el señor Nakata, un anciano con habilidades sobrenaturales. Sus destinos se entrelazan en una narrativa que mezcla realismo mágico con filosofía existencial.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="/public/assets/img/libros7.png" alt="Kafka en la orilla" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Kafka en la orilla</h3>
+                        <p class="text-sm text-gray-500">Haruki Murakami</p>
+                    </div>
+                </button>
+
+                <!-- Libro 6: Crimen y castigo -->
+                <button class="book-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col text-left cursor-pointer"
+                        data-title="Crimen y castigo"
+                        data-author="Fyodor Dostoyevski"
+                        data-genre="Drama"
+                        data-price="12000"
+                        data-cover="/public/assets/img/crimenycastigo.webp"
+                        data-isbn="978-0486415871"
+                        data-synopsis="La historia de Raskolnikov, un estudiante empobrecido que comete un asesinato y lucha con las consecuencias psicológicas y morales de su acto. Una exploración profunda de la culpa, la redención y la naturaleza humana.">
+                    <div class="aspect-[3/4] w-full flex-grow">
+                        <img src="/public/assets/img/crimenycastigo.webp" alt="Crimen y castigo" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-[rgb(29,29,31)] truncate mb-1">Crimen y castigo</h3>
+                        <p class="text-sm text-gray-500">Fyodor Dostoyevski</p>
                     </div>
                 </button>
                 
@@ -272,8 +272,8 @@
     </footer>
 
     <!-- Script para el funcionamiento del modal -->
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/menu-movil.js"></script>
-    <script src="assets/js/responsive-modal.js"></script>
+    <script src="/public/assets/js/modal.js"></script>
+    <script src="/public/assets/js/menu-movil.js"></script>
+    <script src="/public/assets/js/responsive-modal.js"></script>
 </body>
 </html>

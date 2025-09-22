@@ -4,8 +4,8 @@
   "description": "# proyecto-libreria",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./entrada/input.css -o ./salida/output.css --watch",
-    "build": "tailwindcss -i ./entrada/input.css -o ./salida/output.css --minify"
+    "dev": "tailwindcss -i ./input/input.css -o ./salida/output.css --watch",
+    "build": "tailwindcss -i ./input/input.css -o ./salida/output.css --minify"
   },
   "repository": {
     "type": "git",

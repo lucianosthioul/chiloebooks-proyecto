@@ -1,4 +1,4 @@
-// Funcionalidad de desplazamiento suave (smooth scrolling)
+// Funcionalidad de desplazamiento suave
 
 // Desplazamiento a la sección "Más Vendidos" cuando se hace clic en el botón
 const botonIr = document.getElementById('irMasVendidos');
@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         // Obtiene el elemento objetivo usando el atributo href
         const target = document.querySelector(this.getAttribute('href'));
         
-        // Si el elemento objetivo existe, desplázate hasta él suavemente
+        // Si el elemento objetivo existe, desplazamiento suave.
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
