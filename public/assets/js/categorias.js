@@ -108,3 +108,5 @@ function resetFilters() {
     sortSelect.value = '';
     displayBooks(allBooks);
 }
+
+// Fin

@@ -175,3 +175,5 @@ function refreshResponsiveModalListeners() {
         initResponsiveModal();
     }, 100);
 }
+
+// Fin
