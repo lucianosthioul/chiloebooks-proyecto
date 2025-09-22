@@ -23,5 +23,3 @@ document.addEventListener('DOMContentLoaded', function() {
             // Inicializamos el carrusel de Mas Vendidos
             initializeCarousel('carousel-container', 'prevBtn', 'nextBtn');
         });
-
-// Fin

@@ -109,4 +109,3 @@ function resetFilters() {
     displayBooks(allBooks);
 }
 
-// Fin

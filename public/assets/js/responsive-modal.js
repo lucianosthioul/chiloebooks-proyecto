@@ -176,4 +176,3 @@ function refreshResponsiveModalListeners() {
     }, 100);
 }
 
-// Fin
