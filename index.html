@@ -31,6 +31,12 @@
             <a href="/index.html" class="text-2xl font-bold text-gray-900 flex items-center">
                 <img src="assets/img/chiloebooks.png" alt="Logo de Chiloebooks" class="h-8 me-2">
             </a>
+
+         <!-- Botón hamburguesa -->
+            <button id="menu-btn"
+                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 transition-colors duration-200 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
             
             <!-- Menú de navegación -->
             <ul class="hidden md:flex items-center gap-8">
@@ -40,7 +46,51 @@
                 <li><a href="/contacto.html" class="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200 font-poppins">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+
+  </header>
+
+   <!-- Overlay del menú móvil -->
+    <div id="menu-overlay" 
+         class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 ease-in-out md:hidden z-40">
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu"
+         class="fixed top-0 right-0 w-48 h-full bg-white/90 backdrop-blur-md shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+        
+        <!-- Header del menú -->
+        <div class="flex justify-between items-center p-4 border-b border-gray-100">
+            <span class="font-bold text-lg text-gray-800">Menú</span>
+            <button id="close-menu" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Lista de navegación -->
+        <ul class="flex flex-col p-4 space-y-4">
+            <li class="text-right">
+                <a href="/catalogo.html" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
+                    Catálogo
+                </a>
+            </li>
+            <li class="text-right">
+                <a href="/index.html#masVendidos" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
+                    Más Vendidos
+                </a>
+            </li>
+            <li class="text-right">
+                <a href="/nosotros.html" class="block text-gray-700 hover:text-blue-600 text-base py-2 px-2 rounded transition-colors duration-200">
+                    Nosotros
+                </a>
+            </li>
+            <li class="text-right">
+                <a href="/contacto.html"
+                   class="inline-block bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-200">
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- Contenido principal -->
     <main>
@@ -59,23 +109,24 @@
                 </div>
                 
                 <!-- Imagen destacada del libro principal -->
-                <div class="md:w-1/2 flex justify-center">
-                    <button class="book-item transition-all duration-300 hover:scale-105 cursor-pointer"
-                        data-title="La musica del azar"
-                        data-author="Paul Auster"
-                        data-cover="assets/img/portada.jpeg"
-                        data-isbn="978-0140178135"
-                        data-synopsis="Jim Nashe gana dinero en la lotería y se embarca en un viaje sin rumbo que lo lleva a una partida de póker con consecuencias inesperadas. Una exploración del azar, el destino y las decisiones que cambian la vida."
-                        data-genre="Misterio">
-                        <img src="assets/img/portada.jpeg" alt="La musica del azar" class="rounded-lg shadow-2xl w-2/3 md:w-auto">
-                    </button>
-                </div>
+                <div class="w-full md:w-1/2 flex items-center justify-center px-4 py-8 sm:px-6 md:px-0 md:py-0">
+    <button class="book-item transition-all duration-300 hover:scale-105 cursor-pointer"
+        data-title="La musica del azar"
+        data-author="Paul Auster"
+        data-cover="assets/img/portada.jpeg"
+        data-isbn="978-0140178135"
+        data-synopsis="Jim Nashe gana dinero en la lotería y se embarca en un viaje sin rumbo que lo lleva a una partida de póker con consecuencias inesperadas. Una exploración del azar, el destino y las decisiones que cambian la vida."
+        data-genre="Misterio">
+        <img src="assets/img/portada.jpeg" alt="La musica del azar" 
+             class="rounded-lg shadow-2xl w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 mx-auto">
+    </button>
+</div>
             </div>
         </section>
 
         <!-- Sección de libros más vendidos con carrusel -->
-        <section class="py-16 bg-[rgb(245,245,247)]">
-            <div id="masVendidos" class="container mx-auto px-6">
+        <section id="masVendidos" class="py-16 bg-[rgb(245,245,247)]">
+            <div class="container mx-auto px-6">
                 <div class="flex justify-between items-center mb-8">
                     <h2 class="text-3xl font-bold text-[rgb(29,29,31)] font-poppins">Más Vendidos</h2>
                     
@@ -346,5 +397,9 @@
         <script src="assets/js/smooth.js"></script>
         <script src="assets/js/carrusel.js"></script>
         <script src="assets/js/modal.js"></script>
+        <script src="assets/js/responsive-modal.js"></script>
+        <script src="assets/js/menu-movil.js"></script>
+
+         
     </body>
 </html>
