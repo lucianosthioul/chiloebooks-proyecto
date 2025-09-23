@@ -30,5 +30,5 @@ tu-proyecto/
 │       └── css/
 │       └── img/
 │       └── js/
-├── index.html
+│   └── index.html
 └── package.json
