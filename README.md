@@ -21,9 +21,14 @@ npm install tailwindcss @tailwindcss/cli
 
 - **Estructura de proyecto sugerida.**
 tu-proyecto/
-├── entrada/
+├── input/
 │   └── input.css
 ├── salida/
 │   └── output.css
+├── public/
+│   └── assets/
+│       └── css/
+│       └── img/
+│       └── js/
 ├── index.html
 └── package.json
