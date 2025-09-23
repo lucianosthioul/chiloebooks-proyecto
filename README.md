@@ -13,11 +13,11 @@ npm install tailwindcss @tailwindcss/cli
 
 - **Modifica los scripts de package.json con esto. (Dependiendo donde ubiques los archivos input y output)**
 "scripts": {
-    "dev": "tailwindcss -i ./entrada/input.css -o ./salida/output.css --watch",
-    "build": "tailwindcss -i ./entrada/input.css -o ./salida/output.css --minify"
+    "dev": "tailwindcss -i ./input/input.css -o ./salida/output.css --watch",
+    "build": "tailwindcss -i ./input/input.css -o ./salida/output.css --minify"
   },
 - **Empieza a usar Tailwind en tu HTML, añade este comando al head, dependiendo donde tengas ubicado el output.css.**
-  `<link href="./output.css" rel="stylesheet">`
+  `<link href="/salida/output.css" rel="stylesheet">`
 
 - **Estructura de proyecto sugerida.**
 tu-proyecto/
